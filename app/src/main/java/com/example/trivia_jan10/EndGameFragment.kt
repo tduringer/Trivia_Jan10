@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.trivia_jan10.databinding.FragmentWelcomeBinding
 
 class EndGameFragment : Fragment() {
@@ -32,6 +33,8 @@ class EndGameFragment : Fragment() {
             startBtn.setOnClickListener {
                 viewModel.resetGame()
                 // TODO: Implement navigation
+                val action = EndGameFragmentDirections.actionEndGameFragmentToQuestionFragment()
+                findNavController().navigate(action)
             }
         }
     }

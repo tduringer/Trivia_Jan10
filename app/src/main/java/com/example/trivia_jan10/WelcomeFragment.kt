@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.trivia_jan10.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
@@ -25,6 +26,8 @@ class WelcomeFragment : Fragment() {
         _binding?.let { view ->
             view.startBtn.setOnClickListener {
                 // TODO: Implement
+                val action = WelcomeFragmentDirections.actionWelcomeFragmentToQuestionFragment()
+                findNavController().navigate(action)
             }
         }
     }

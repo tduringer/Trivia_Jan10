@@ -3,6 +3,7 @@ package com.example.trivia_jan10
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.trivia_jan10.databinding.FragmentQuestionBinding
 import com.example.trivia_jan10.databinding.ItemAnswerBinding
 
 class AnswerAdapter(
@@ -45,4 +46,10 @@ class AnswerAdapter(
             answerTv.text = answer.answer
         }
     }
+//    class questionViewHolder(private val binding : FragmentQuestionBinding)
+//        : RecyclerView.ViewHolder(binding.root) {
+//            fun bind(question: Question) = with(binding) {
+//                questionRv.text
+//            }
+//        }
 }
